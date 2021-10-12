@@ -1,8 +1,14 @@
 ﻿using System;
 
-namespace FakerLib
+namespace FakerLib.BasicTypesGenerators
 {
-    public class Class1
+    class IntGenerator : IBasicTypeGenerator
     {
+        public Type ResType => typeof(int);
+        
+        public object Generate()
+        {
+            return new Random().Next();
+        }
     }
 }

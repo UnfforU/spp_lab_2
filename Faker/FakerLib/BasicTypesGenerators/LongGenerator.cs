@@ -4,9 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FakerLib
+namespace FakerLib.BasicTypesGenerators
 {
-    class LongGenerator
+    class LongGenerator : IBasicTypeGenerator
     {
+        public Type ResType => typeof(long);
+
+        public object Generate()
+        {
+            var rnd = new Random();
+            long result = rnd.Next() * rnd.Next();
+            return result;
+        }
     }
 }

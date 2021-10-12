@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FakerLib
+namespace FakerLib.BasicTypesGenerators
 {
-    interface Interface1
+    public interface IBasicTypeGenerator
     {
+        Type ResType { get; }
+
+        object Generate();
     }
 }

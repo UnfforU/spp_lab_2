@@ -4,9 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FakerLib
+namespace FakerLib.BasicTypesGenerators 
 {
-    class FloatGenerator
+    class FloatGenerator : IBasicTypeGenerator
     {
+        public Type ResType => typeof(float);
+
+        public object Generate()
+        {
+            var rnd = new Random();
+            float result = (float)(rnd.NextDouble() * rnd.Next());
+            return result;
+        }
     }
 }

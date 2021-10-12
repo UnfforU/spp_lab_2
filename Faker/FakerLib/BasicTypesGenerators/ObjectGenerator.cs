@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace FakerLib.BasicTypesGenerators
 {
-    class DoubleGenerator : IBasicTypeGenerator
+    class ObjectGenerator : IBasicTypeGenerator
     {
-        public Type ResType => typeof(double);
+        public Type ResType => typeof(object);
 
         public object Generate()
         {
-            var rnd = new Random();
-            double result = rnd.NextDouble() * rnd.Next();
-            return result;
+            return new object();
         }
     }
 }
