@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FakerLib.CollectionTypesGenerators
 {
-    interface ICollectionTypeGenerator
+    public interface ICollectionTypeGenerator
     {
         Type[] CollectionTypes { get; }
 
